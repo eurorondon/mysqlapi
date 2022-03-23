@@ -46,7 +46,10 @@ app.get('/api/users', (req,res)=>{
     })
 });
 
-const puerto = process.env.PUERTO || 3000;
-app.listen(puerto, function(){
-    console.log("Servidor Ok en puerto:"+puerto);
-});
+//const puerto = process.env.PUERTO || 3000;
+//app.listen(puerto, function(){
+//    console.log("Servidor Ok en puerto:"+puerto);
+//});
+
+var port_number = server.listen(process.env.PORT || 3000);
+app.listen(port_number);
